@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a09">
+  <title>实验室动态 | 第N实验室</title>
+  <link rel="stylesheet" href="assets/lab.css">
+  <link rel="stylesheet" href="assets/home.css">
+</head>
+<body class="subpage update-page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html" aria-label="第N实验室首页">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span class="brand-copy"><strong>第N实验室</strong><small>THE NTH ROOM</small></span>
+      </a>
+      <nav class="primary-nav" aria-label="实验室信息导航">
+        <a href="index.html#top">主页</a>
+        <a href="updates.html?section=training" data-update-nav="training">近期培训安排</a>
+        <a href="updates.html?section=notice" data-update-nav="notice">每周讲解公告</a>
+        <a href="updates.html?section=materials" data-update-nav="materials">网盘资料</a>
+      </nav>
+      <a class="topbar-join" href="updates.html?section=materials#qq">QQ群入口 <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main class="content-shell update-page-main">
+    <a class="back-link" href="index.html">← 返回实验室主页</a>
+    <header class="update-page-heading">
+      <p class="section-kicker" id="update-kicker">THE NTH ROOM / UPDATES</p>
+      <h1 id="update-title">实验室动态</h1>
+      <p id="update-summary" class="library-description"></p>
+    </header>
+    <section id="update-body" class="update-page-body" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">第N实验室 <span>·</span> THE NTH ROOM</a>
+    <a href="index.html#top" class="footer-top">返回主页 ↑</a>
+  </footer>
+
+  <script src="assets/site-data.js"></script>
+  <script src="assets/updates.js"></script>
+</body>
+</html>

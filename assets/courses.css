@@ -1,0 +1,93 @@
+.course-section { padding: 48px 0 52px; background: #f3f5f2; }
+.course-section-top { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 20px; }
+.course-section-top .section-kicker { margin: 0; color: #667c4b; }
+.course-section-top h2 { margin: 7px 0 0; font-size: 26px; line-height: 1.3; }
+.course-section-top > div:first-child > p:last-child { margin: 7px 0 0; color: #707872; font-size: 12px; line-height: 1.65; }
+.course-controls { display: flex; flex: 0 0 auto; gap: 8px; }
+.course-control { display: grid; place-items: center; width: 40px; aspect-ratio: 1; padding: 0; border: 1px solid #cfd6cf; background: #fff; color: #202722; font: inherit; font-size: 20px; line-height: 1; cursor: pointer; transition: background-color .16s ease, color .16s ease, border-color .16s ease; }
+.course-control:hover:not(:disabled) { border-color: #243c36; background: #243c36; color: #fff; }
+.course-control:disabled { color: #a4aba4; cursor: default; }
+.course-track { display: flex; gap: 18px; overflow-x: auto; padding: 0 0 13px; scroll-padding-inline: 2px; scroll-snap-type: x mandatory; scrollbar-color: #8d998a #dfe4dc; scrollbar-width: thin; touch-action: pan-x; cursor: grab; user-select: none; }
+.course-track.is-dragging { cursor: grabbing; scroll-snap-type: none; }
+.course-card { display: flex; flex: 0 0 clamp(380px, 35vw, 440px); min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid #d9dfd8; border-radius: 7px; background: #fff; color: #171b18; scroll-snap-align: start; transition: border-color .18s ease, transform .18s ease; }
+.course-card:hover { border-color: #9cac91; transform: translateY(-3px); }
+.course-cover { position: relative; display: grid; place-items: center; aspect-ratio: 16 / 9; overflow: hidden; background: #263c37; }
+.course-cover > img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.course-card:hover .course-cover > img { transform: scale(1.035); }
+.course-cover-label { position: absolute; top: 13px; left: 13px; z-index: 2; padding: 6px 8px; background: #101714d9; color: #f6f8f4; font-size: 9px; font-weight: 750; line-height: 1; }
+.course-card-copy { display: flex; flex: 1; flex-direction: column; min-height: 168px; padding: 16px 18px 15px; }
+.course-card-meta { margin: 0; color: #737e74; font-size: 9px; font-weight: 750; }
+.course-card-copy h3 { margin: 5px 0 0; font-size: 20px; line-height: 1.35; }
+.course-card-copy > p:not(.course-card-meta) { margin: 7px 0 0; color: #69736b; font-size: 11px; line-height: 1.7; }
+.course-card-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 13px; color: #405d37; font-size: 11px; font-weight: 750; }
+.course-card-link span { color: #b36148; font-size: 15px; }
+
+.course-cover--soldering { background-color: #263b38; background-image: repeating-linear-gradient(0deg, transparent 0 31px, #ffffff0b 32px), repeating-linear-gradient(90deg, transparent 0 31px, #ffffff0b 32px); }
+.soldering-art { position: relative; width: 78%; height: 71%; }
+.solder-board { position: absolute; right: 2%; bottom: 4%; width: 72%; height: 43%; border: 8px solid #152c28; background: #547d62; box-shadow: 0 10px 0 #142722; transform: skewX(-12deg) rotate(-5deg); }
+.solder-board i { position: absolute; width: 11px; height: 11px; border: 2px solid #d7d99c; background: #b78655; }
+.solder-board i:nth-child(1) { top: 12px; left: 16px; }
+.solder-board i:nth-child(2) { top: 24px; right: 22px; }
+.solder-board i:nth-child(3) { bottom: 10px; left: 48%; }
+.solder-board b { position: absolute; top: 18%; left: 40%; width: 24%; height: 54%; border: 3px solid #172924; background: #333c39; }
+.solder-iron { position: absolute; top: 9%; left: 13%; width: 72%; height: 20px; transform: rotate(24deg); transform-origin: 92% 50%; }
+.solder-iron i { position: absolute; left: 0; top: 0; width: 57%; height: 100%; border-radius: 4px 0 0 4px; background: #e27854; box-shadow: inset 0 -5px #bb5941; }
+.solder-iron b { position: absolute; left: 57%; top: 7px; width: 40%; height: 6px; background: #c6d0c7; }
+.solder-iron b::after { position: absolute; right: -8px; top: 1px; width: 13px; height: 4px; background: #f0c976; content: ""; }
+.solder-spark { position: absolute; top: 47%; left: 65%; width: 8px; height: 8px; border-radius: 50%; background: #f3d36e; box-shadow: 0 0 14px 5px #e2a45c88; }
+
+.course-cover--printer { background: #dce9e4; }
+.course-cover--printer .course-cover-label { background: #203b40; }
+.printer-art { position: relative; width: 65%; height: 78%; }
+.printer-spool { position: absolute; top: 10%; right: 2%; width: 45px; aspect-ratio: 1; border: 7px solid #dd8056; border-radius: 50%; box-shadow: inset 0 0 0 5px #d1d7c5; }
+.printer-spool::after { position: absolute; inset: 12px; border-radius: 50%; background: #d9e2d9; content: ""; }
+.printer-frame { position: absolute; left: 14%; bottom: 7%; width: 65%; height: 78%; border: 8px solid #254a4b; border-bottom-width: 12px; }
+.printer-rail { position: absolute; top: 13%; left: 0; width: 100%; height: 7px; background: #517b70; }
+.printer-side { position: absolute; top: 10%; width: 7px; height: 75%; background: #517b70; }
+.printer-side--left { left: 14%; }
+.printer-side--right { right: 14%; }
+.printer-head { position: absolute; top: 15%; left: 42%; width: 25px; height: 28px; border: 5px solid #e18359; background: #f3e8cc; }
+.printer-head::after { position: absolute; left: 6px; bottom: -14px; width: 5px; height: 12px; background: #d17c55; content: ""; }
+.printer-bed { position: absolute; left: 19%; bottom: 18%; width: 62%; height: 7px; background: #a7bdb0; }
+.printer-model { position: absolute; left: 39%; bottom: 25%; width: 24%; height: 30px; border: 3px solid #d4a660; border-bottom: 0; background: repeating-linear-gradient(0deg, #d4a660 0 4px, #f0d5a1 4px 7px); clip-path: polygon(12% 0, 88% 0, 100% 100%, 0 100%); }
+
+.course-detail-main { min-height: calc(100vh - 134px); max-width: 1040px; padding-top: 34px; padding-bottom: 68px; }
+.course-back-link { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 29px; color: #657065; font-size: 12px; }
+.course-back-link:hover { color: #496d35; }
+.course-detail-heading { margin-bottom: 20px; }
+.course-detail-heading .section-kicker { margin: 0; color: #657c4a; }
+.course-detail-heading h1 { margin: 7px 0 0; font-size: 36px; line-height: 1.25; }
+.course-detail-heading > p:last-child { max-width: 700px; margin: 9px 0 0; color: #707872; font-size: 13px; line-height: 1.7; }
+.course-video-slot { min-height: 330px; aspect-ratio: 16 / 9; overflow: hidden; background: #111714; }
+.course-video-slot video { display: block; width: 100%; height: 100%; background: #111714; object-fit: contain; }
+.course-video-open { display: inline-flex; align-items: center; gap: 9px; margin-top: 12px; color: #496b3e; font-size: 11px; font-weight: 700; }
+.course-video-open span { color: #b36148; font-size: 14px; }
+
+@media (max-width: 760px) {
+  .course-section { padding: 32px 0 38px; }
+  .course-section-top { align-items: center; gap: 12px; margin-bottom: 16px; }
+  .course-section-top h2 { font-size: 21px; }
+  .course-section-top > div:first-child > p:last-child { max-width: 235px; font-size: 11px; }
+  .course-control { width: 35px; }
+  .course-track { gap: 12px; }
+  .course-card { flex-basis: calc(100vw - 82px); }
+  .course-card-copy { min-height: 158px; padding: 14px 14px 13px; }
+  .course-card-copy h3 { font-size: 18px; }
+  .course-detail-main { min-height: calc(100vh - 151px); padding-top: 25px; padding-bottom: 45px; }
+  .course-back-link { margin-bottom: 22px; }
+  .course-detail-heading h1 { font-size: 30px; }
+  .course-video-slot { min-height: 230px; }
+}
+
+@media (max-width: 380px) {
+  .course-section-top { align-items: flex-start; }
+  .course-section-top > div:first-child > p:last-child { max-width: 185px; }
+  .course-controls { gap: 5px; }
+  .course-control { width: 32px; }
+  .course-card { flex-basis: calc(100vw - 72px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .course-card, .course-cover > img, .course-control { transition: none; }
+  .course-track { scroll-behavior: auto; }
+}

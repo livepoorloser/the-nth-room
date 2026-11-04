@@ -1,0 +1,65 @@
+(() => {
+  const track = document.getElementById('course-track');
+  if (!track) return;
+
+  const buttons = [...document.querySelectorAll('[data-course-scroll]')];
+  const updateControls = () => {
+    const atStart = track.scrollLeft <= 1;
+    const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+    for (const button of buttons) {
+      button.disabled = Number(button.dataset.courseScroll) < 0 ? atStart : atEnd;
+    }
+  };
+
+  for (const button of buttons) {
+    button.addEventListener('click', () => {
+      const direction = Number(button.dataset.courseScroll);
+      const firstCard = track.querySelector('.course-card');
+      const gap = Number.parseFloat(window.getComputedStyle(track).columnGap) || 0;
+      track.scrollBy({
+        left: direction * ((firstCard?.getBoundingClientRect().width || track.clientWidth * 0.7) + gap),
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+      });
+    });
+  }
+
+  let pointerStart = 0;
+  let scrollStart = 0;
+  let moved = false;
+  track.addEventListener('pointerdown', event => {
+    if (event.pointerType !== 'mouse' || event.button !== 0) return;
+    pointerStart = event.clientX;
+    scrollStart = track.scrollLeft;
+    moved = false;
+    track.setPointerCapture(event.pointerId);
+  });
+
+  track.addEventListener('pointermove', event => {
+    if (!track.hasPointerCapture(event.pointerId)) return;
+    const distance = event.clientX - pointerStart;
+    if (Math.abs(distance) > 5) {
+      moved = true;
+      track.classList.add('is-dragging');
+      track.scrollLeft = scrollStart - distance;
+      event.preventDefault();
+    }
+  });
+
+  const finishDrag = () => {
+    if (!track.classList.contains('is-dragging')) return;
+    track.classList.remove('is-dragging');
+    if (!moved) return;
+    const suppressClick = event => {
+      event.preventDefault();
+      event.stopPropagation();
+    };
+    track.addEventListener('click', suppressClick, { capture: true, once: true });
+    window.setTimeout(() => track.removeEventListener('click', suppressClick, true), 250);
+  };
+
+  track.addEventListener('pointerup', finishDrag);
+  track.addEventListener('pointercancel', finishDrag);
+  track.addEventListener('scroll', updateControls, { passive: true });
+  window.addEventListener('resize', updateControls);
+  updateControls();
+})();

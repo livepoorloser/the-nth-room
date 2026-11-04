@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a09">
+  <meta name="description" content="燕山大学第N实验室：项目池模式、兴趣带动学习，聚焦嵌入式。">
+  <title>第N实验室 | The Nth Room</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="assets/lab.css">
+  <link rel="stylesheet" href="assets/home.css">
+  <link rel="stylesheet" href="assets/courses.css">
+</head>
+<body class="home-page">
+  <header class="topbar" id="top">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html" aria-label="第N实验室首页">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span class="brand-copy"><strong>第N实验室</strong><small>THE NTH ROOM</small></span>
+      </a>
+      <nav class="primary-nav" aria-label="主页导航">
+        <a href="index.html#top" aria-current="page">主页</a>
+        <a href="#courses">学习主题</a>
+        <a href="updates.html?section=training">近期培训安排</a>
+        <a href="updates.html?section=notice">每周讲解公告</a>
+        <a href="updates.html?section=materials">网盘资料</a>
+      </nav>
+      <a class="topbar-join" href="updates.html?section=materials#qq">QQ群入口 <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-visual" id="home-hero" aria-labelledby="hero-title">
+      <div class="hero-stage">
+        <img class="hero-image" src="assets/embedded-board.jpg" alt="嵌入式电子电路板与微控制器特写" fetchpriority="high">
+        <div class="hero-shade" aria-hidden="true"></div>
+
+        <div class="hero-heading">
+          <p class="hero-concept">N 代表变量、无穷与最优解</p>
+          <p class="hero-eyebrow">THE NTH ROOM <span>/</span> EMBEDDED LAB</p>
+          <h1 id="hero-title">第N实验室</h1>
+          <p class="hero-motto">项目池模式 · 兴趣带动学习 · 嵌入式</p>
+          <p class="hero-note">不止步于已有方案，继续探索更好的第 N 种可能。</p>
+          <a class="hero-action" href="#courses">浏览学习主题 <span aria-hidden="true">↓</span></a>
+        </div>
+
+      </div>
+    </section>
+    <section class="course-section" id="courses" aria-labelledby="course-section-title">
+      <div class="content-shell">
+        <div class="course-section-top">
+          <div>
+            <p class="section-kicker">HANDS-ON LEARNING</p>
+            <h2 id="course-section-title">把想法做出来</h2>
+            <p>从电路板到实体作品，挑一个主题开始动手。</p>
+          </div>
+          <div class="course-controls" role="group" aria-label="学习主题滚动控制">
+            <button class="course-control" type="button" data-course-scroll="-1" aria-label="向左滚动" title="向左滚动">←</button>
+            <button class="course-control" type="button" data-course-scroll="1" aria-label="向右滚动" title="向右滚动">→</button>
+          </div>
+        </div>
+        <div class="course-track" id="course-track" role="region" aria-label="学习主题" tabindex="0">
+          <a class="course-card" href="courses/pcb-making.html">
+            <div class="course-cover course-cover--pcb">
+              <img src="assets/embedded-board.jpg" alt="嵌入式电路板与芯片近照" loading="lazy">
+              <span class="course-cover-label">HARDWARE / 01</span>
+            </div>
+            <div class="course-card-copy">
+              <p class="course-card-meta">DESIGN · FABRICATION</p>
+              <h3>PCB 制作</h3>
+              <p>从电路设计到实物制板，完成一块属于自己的电路板。</p>
+              <span class="course-card-link">进入专题 <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="course-card" href="courses/soldering.html">
+            <div class="course-cover course-cover--soldering" aria-hidden="true">
+              <span class="course-cover-label">BENCH SKILLS / 02</span>
+              <div class="soldering-art">
+                <span class="solder-board"><i></i><i></i><i></i><b></b></span>
+                <span class="solder-iron"><i></i><b></b></span>
+                <span class="solder-spark"></span>
+              </div>
+            </div>
+            <div class="course-card-copy">
+              <p class="course-card-meta">TOOLS · CONNECTIONS</p>
+              <h3>焊接</h3>
+              <p>认识常用工具与基础操作，让元件连接更可靠。</p>
+              <span class="course-card-link">进入专题 <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="course-card" href="courses/3d-printer.html">
+            <div class="course-cover course-cover--printer" aria-hidden="true">
+              <span class="course-cover-label">DIGITAL MAKING / 03</span>
+              <div class="printer-art">
+                <span class="printer-spool"></span>
+                <span class="printer-frame"><i class="printer-rail"></i><i class="printer-side printer-side--left"></i><i class="printer-side printer-side--right"></i><i class="printer-head"></i><i class="printer-bed"></i><i class="printer-model"></i></span>
+              </div>
+            </div>
+            <div class="course-card-copy">
+              <p class="course-card-meta">MODEL · PRINT</p>
+              <h3>3D 打印机</h3>
+              <p>了解设备、模型切片与打印流程，把数字模型变成实物。</p>
+              <span class="course-card-link">进入专题 <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="home-brief" id="recent" aria-labelledby="home-brief-title">
+      <div class="content-shell home-brief-inner">
+        <div class="home-brief-intro">
+          <p class="section-kicker">LAB UPDATES</p>
+          <h2 id="home-brief-title">实验室近期安排</h2>
+          <p>培训、每周讲解与配套资料</p>
+        </div>
+        <div class="home-event-list" id="home-events" aria-live="polite">
+          <p class="empty-note">近期安排加载中…</p>
+        </div>
+        <nav class="home-shortcuts" aria-label="实验室信息入口">
+          <a href="updates.html?section=notice"><span>每周讲解公告</span><span aria-hidden="true">↗</span></a>
+          <a href="updates.html?section=materials"><span>网盘资料与QQ群</span><span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#top">第N实验室 <span>·</span> THE NTH ROOM</a>
+    <a href="https://images.unsplash.com/photo-1518770660439-4636190af475" target="_blank" rel="noreferrer">嵌入式主视觉：Unsplash ↗</a>
+    <a href="updates.html?section=materials">每周资料与交流入口 ↗</a>
+  </footer>
+
+  <script src="assets/site-data.js"></script>
+  <script src="assets/home.js"></script>
+  <script src="assets/course-carousel.js"></script>
+</body>
+</html>
