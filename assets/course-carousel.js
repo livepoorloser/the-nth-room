@@ -25,17 +25,27 @@
 
   let pointerStart = 0;
   let scrollStart = 0;
+  let activePointerId = null;
+  let suppressClickPointerId = null;
   let moved = false;
+  track.addEventListener('click', event => {
+    if (event.pointerId !== suppressClickPointerId) return;
+    event.preventDefault();
+    event.stopPropagation();
+    suppressClickPointerId = null;
+  }, true);
+
   track.addEventListener('pointerdown', event => {
     if (event.pointerType !== 'mouse' || event.button !== 0) return;
     pointerStart = event.clientX;
     scrollStart = track.scrollLeft;
+    activePointerId = event.pointerId;
     moved = false;
     track.setPointerCapture(event.pointerId);
   });
 
   track.addEventListener('pointermove', event => {
-    if (!track.hasPointerCapture(event.pointerId)) return;
+    if (event.pointerId !== activePointerId || !track.hasPointerCapture(event.pointerId)) return;
     const distance = event.clientX - pointerStart;
     if (Math.abs(distance) > 5) {
       moved = true;
@@ -45,16 +55,17 @@
     }
   });
 
-  const finishDrag = () => {
-    if (!track.classList.contains('is-dragging')) return;
+  const finishDrag = event => {
+    if (event.pointerId !== activePointerId) return;
     track.classList.remove('is-dragging');
-    if (!moved) return;
-    const suppressClick = event => {
-      event.preventDefault();
-      event.stopPropagation();
-    };
-    track.addEventListener('click', suppressClick, { capture: true, once: true });
-    window.setTimeout(() => track.removeEventListener('click', suppressClick, true), 250);
+    if (moved && event.type === 'pointerup') {
+      suppressClickPointerId = event.pointerId;
+      window.setTimeout(() => {
+        if (suppressClickPointerId === event.pointerId) suppressClickPointerId = null;
+      }, 0);
+    }
+    activePointerId = null;
+    moved = false;
   };
 
   track.addEventListener('pointerup', finishDrag);

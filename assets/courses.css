@@ -9,7 +9,7 @@
 .course-control:disabled { color: #a4aba4; cursor: default; }
 .course-track { display: flex; gap: 18px; overflow-x: auto; padding: 0 0 13px; scroll-padding-inline: 2px; scroll-snap-type: x mandatory; scrollbar-color: #8d998a #dfe4dc; scrollbar-width: thin; touch-action: pan-x; cursor: grab; user-select: none; }
 .course-track.is-dragging { cursor: grabbing; scroll-snap-type: none; }
-.course-card { display: flex; flex: 0 0 clamp(380px, 35vw, 440px); min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid #d9dfd8; border-radius: 7px; background: #fff; color: #171b18; scroll-snap-align: start; transition: border-color .18s ease, transform .18s ease; }
+.course-card { display: flex; flex: 0 0 clamp(380px, 35vw, 440px); min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid #d9dfd8; border-radius: 7px; background: #fff; color: #171b18; cursor: pointer; scroll-snap-align: start; transition: border-color .18s ease, transform .18s ease; }
 .course-card:hover { border-color: #9cac91; transform: translateY(-3px); }
 .course-cover { position: relative; display: grid; place-items: center; aspect-ratio: 16 / 9; overflow: hidden; background: #263c37; }
 .course-cover > img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
