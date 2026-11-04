@@ -41,13 +41,13 @@
     scrollStart = track.scrollLeft;
     activePointerId = event.pointerId;
     moved = false;
-    track.setPointerCapture(event.pointerId);
   });
 
   track.addEventListener('pointermove', event => {
-    if (event.pointerId !== activePointerId || !track.hasPointerCapture(event.pointerId)) return;
+    if (event.pointerId !== activePointerId) return;
     const distance = event.clientX - pointerStart;
     if (Math.abs(distance) > 5) {
+      if (!moved) track.setPointerCapture(event.pointerId);
       moved = true;
       track.classList.add('is-dragging');
       track.scrollLeft = scrollStart - distance;

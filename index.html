@@ -8,8 +8,8 @@
   <title>第N实验室 | The Nth Room</title>
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="assets/lab.css">
-  <link rel="stylesheet" href="assets/home.css?v=course-photo-credits-1">
-  <link rel="stylesheet" href="assets/courses.css?v=course-photo-credits-1">
+  <link rel="stylesheet" href="assets/home.css?v=course-video-modal-2">
+  <link rel="stylesheet" href="assets/courses.css?v=course-video-modal-2">
 </head>
 <body class="home-page">
   <header class="topbar" id="top">
@@ -59,7 +59,7 @@
           </div>
         </div>
         <div class="course-track" id="course-track" role="region" aria-label="学习主题" tabindex="0">
-          <a class="course-card" href="courses/pcb-making.html">
+          <a class="course-card" href="courses/pcb-making.html" data-video-src="https://media.githubusercontent.com/media/livepoorloser/the-nth-room/main/videos/PCB%E5%88%B6%E6%9D%BF.mp4" data-video-title="PCB 制作" data-video-kicker="HARDWARE / PCB FABRICATION" aria-haspopup="dialog">
             <div class="course-cover course-cover--pcb">
               <img src="assets/pcb-board.jpg" alt="元件密集的真实印刷电路板" loading="lazy">
               <span class="course-cover-label">HARDWARE / 01</span>
@@ -71,7 +71,7 @@
               <span class="course-card-link">进入专题 <span aria-hidden="true">↗</span></span>
             </div>
           </a>
-          <a class="course-card" href="courses/soldering.html">
+          <a class="course-card" href="courses/soldering.html" data-video-src="https://media.githubusercontent.com/media/livepoorloser/the-nth-room/main/videos/%E7%84%8A%E6%8E%A5.mp4" data-video-title="焊接" data-video-kicker="BENCH SKILLS / SOLDERING" aria-haspopup="dialog">
             <div class="course-cover course-cover--soldering">
               <img src="assets/soldering-board.jpg" alt="技术员正用烙铁维修电路板" loading="lazy">
               <span class="course-cover-label">BENCH SKILLS / 02</span>
@@ -83,7 +83,7 @@
               <span class="course-card-link">进入专题 <span aria-hidden="true">↗</span></span>
             </div>
           </a>
-          <a class="course-card" href="courses/3d-printer.html">
+          <a class="course-card" href="courses/3d-printer.html" data-video-src="https://media.githubusercontent.com/media/livepoorloser/the-nth-room/main/videos/%E5%BB%BA%E6%A8%A1.mp4" data-video-title="3D 打印机" data-video-kicker="DIGITAL MAKING / 3D PRINTING" aria-haspopup="dialog">
             <div class="course-cover course-cover--printer">
               <img src="assets/3d-printer.jpg" alt="展会中的桌面式 FDM 3D 打印机" loading="lazy">
               <span class="course-cover-label">DIGITAL MAKING / 03</span>
@@ -121,6 +121,27 @@
     </section>
   </main>
 
+  <dialog class="course-video-modal" id="course-video-modal" aria-labelledby="course-video-modal-title">
+    <div class="course-video-modal-panel">
+      <header class="course-video-modal-heading">
+        <div>
+          <p class="course-video-modal-kicker" data-course-video-kicker>HANDS-ON LEARNING</p>
+          <h2 id="course-video-modal-title" data-course-video-title>课程视频</h2>
+        </div>
+        <button class="course-video-modal-close" type="button" data-course-video-close aria-label="关闭视频">×</button>
+      </header>
+      <div class="course-video-modal-player">
+        <video data-course-video controls playsinline preload="metadata" aria-label="课程教学视频">
+          <p>当前浏览器不支持内嵌视频，请使用下方链接打开。</p>
+        </video>
+      </div>
+      <footer class="course-video-modal-footer">
+        <span>点击播放器控制栏即可播放、暂停和调整音量</span>
+        <a data-course-video-open target="_blank" rel="noopener">单独打开视频 <span aria-hidden="true">↗</span></a>
+      </footer>
+    </div>
+  </dialog>
+
   <footer class="site-footer">
     <a class="footer-brand" href="#top">第N实验室 <span>·</span> THE NTH ROOM</a>
     <a href="https://images.unsplash.com/photo-1518770660439-4636190af475" target="_blank" rel="noreferrer">嵌入式主视觉：Unsplash ↗</a>
@@ -135,6 +156,7 @@
 
   <script src="assets/site-data.js"></script>
   <script src="assets/home.js"></script>
-  <script src="assets/course-carousel.js?v=2722721"></script>
+  <script src="assets/course-carousel.js?v=course-video-modal-2"></script>
+  <script src="assets/course-modal.js?v=course-video-modal-2"></script>
 </body>
 </html>
