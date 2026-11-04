@@ -8,8 +8,8 @@
   <title>第N实验室 | The Nth Room</title>
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="assets/lab.css">
-  <link rel="stylesheet" href="assets/home.css?v=single-photo-bg-4">
-  <link rel="stylesheet" href="assets/courses.css?v=single-photo-bg-4">
+  <link rel="stylesheet" href="assets/home.css?v=course-photo-credits-1">
+  <link rel="stylesheet" href="assets/courses.css?v=course-photo-credits-1">
 </head>
 <body class="home-page">
   <header class="topbar" id="top">
@@ -61,7 +61,7 @@
         <div class="course-track" id="course-track" role="region" aria-label="学习主题" tabindex="0">
           <a class="course-card" href="courses/pcb-making.html">
             <div class="course-cover course-cover--pcb">
-              <img src="assets/embedded-board.jpg" alt="嵌入式电路板与芯片近照" loading="lazy">
+              <img src="assets/pcb-board.jpg" alt="元件密集的真实印刷电路板" loading="lazy">
               <span class="course-cover-label">HARDWARE / 01</span>
             </div>
             <div class="course-card-copy">
@@ -72,13 +72,9 @@
             </div>
           </a>
           <a class="course-card" href="courses/soldering.html">
-            <div class="course-cover course-cover--soldering" aria-hidden="true">
+            <div class="course-cover course-cover--soldering">
+              <img src="assets/soldering-board.jpg" alt="技术员正用烙铁维修电路板" loading="lazy">
               <span class="course-cover-label">BENCH SKILLS / 02</span>
-              <div class="soldering-art">
-                <span class="solder-board"><i></i><i></i><i></i><b></b></span>
-                <span class="solder-iron"><i></i><b></b></span>
-                <span class="solder-spark"></span>
-              </div>
             </div>
             <div class="course-card-copy">
               <p class="course-card-meta">TOOLS · CONNECTIONS</p>
@@ -88,12 +84,9 @@
             </div>
           </a>
           <a class="course-card" href="courses/3d-printer.html">
-            <div class="course-cover course-cover--printer" aria-hidden="true">
+            <div class="course-cover course-cover--printer">
+              <img src="assets/3d-printer.jpg" alt="展会中的桌面式 FDM 3D 打印机" loading="lazy">
               <span class="course-cover-label">DIGITAL MAKING / 03</span>
-              <div class="printer-art">
-                <span class="printer-spool"></span>
-                <span class="printer-frame"><i class="printer-rail"></i><i class="printer-side printer-side--left"></i><i class="printer-side printer-side--right"></i><i class="printer-head"></i><i class="printer-bed"></i><i class="printer-model"></i></span>
-              </div>
             </div>
             <div class="course-card-copy">
               <p class="course-card-meta">MODEL · PRINT</p>
@@ -131,6 +124,12 @@
   <footer class="site-footer">
     <a class="footer-brand" href="#top">第N实验室 <span>·</span> THE NTH ROOM</a>
     <a href="https://images.unsplash.com/photo-1518770660439-4636190af475" target="_blank" rel="noreferrer">嵌入式主视觉：Unsplash ↗</a>
+    <div class="footer-photo-credits" aria-label="学习主题卡片照片来源">
+      <span>卡片照片：</span>
+      <a href="https://commons.wikimedia.org/wiki/File:RS_42471-12_PCB_02.jpg" target="_blank" rel="noreferrer">PCB · Mister rf · CC BY-SA 4.0</a>
+      <a href="https://commons.wikimedia.org/wiki/File:US_Navy_070129-N-3038W-059_Electronics_Technician_3rd_Class_Christopher_Ralph_uses_a_soldering_iron_to_make_repairs_on_a_circuit_board_in_the_micro-miniature_electronics_repair_shop_aboard_the_Nimitz-class_aircraft_carrier_USS.jpg" target="_blank" rel="noreferrer">焊接 · U.S. Navy · 公共领域</a>
+      <a href="https://commons.wikimedia.org/wiki/File:Boson_Machines_Graviton_Evolution_Automation_Expo.jpg" target="_blank" rel="noreferrer">3D 打印 · Iawaken · CC BY-SA 4.0</a>
+    </div>
     <a href="updates.html?section=materials">每周资料与交流入口 ↗</a>
   </footer>
 

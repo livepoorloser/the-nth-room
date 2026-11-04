@@ -1,6 +1,10 @@
 .home-page { min-height: 100vh; background-color: #101613; background-image: url("embedded-board.jpg"); background-position: center; background-attachment: fixed; background-size: cover; color: #f3f5f1; }
 .home-page .topbar, .home-page .site-footer { background: #080a09c9; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 .home-page .site-footer { flex-wrap: wrap; padding-top: 14px; padding-bottom: 14px; }
+.home-page .footer-photo-credits { display: flex; flex: 1 1 460px; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 12px; line-height: 1.5; }
+.home-page .footer-photo-credits > span { color: #89938b; }
+.home-page .footer-photo-credits > a { color: #b4bbb5; text-decoration: underline; text-decoration-color: #667168; text-underline-offset: 2px; }
+.home-page .footer-photo-credits > a:hover { color: #fff; }
 .hero-visual { position: relative; height: min(78vh, 840px); min-height: 690px; overflow: hidden; background: transparent; color: #fff; }
 .hero-stage { position: absolute; inset: 0; overflow: hidden; isolation: isolate; background: transparent; }
 .hero-shade { position: absolute; inset: 0; z-index: 1; background: transparent; pointer-events: none; }
@@ -103,6 +107,7 @@
   .hero-controls button { width: 32px; }
   .home-page .site-footer { justify-content: flex-start; gap: 10px 16px; padding: 13px 16px; }
   .home-page .site-footer a { max-width: 100%; white-space: normal; line-height: 1.5; }
+  .home-page .footer-photo-credits { flex-basis: 100%; justify-content: flex-start; }
   .update-page-main { min-height: calc(100vh - 151px); padding-top: 25px; padding-bottom: 50px; }
   .update-page-heading h1 { font-size: 30px; }
   .update-page-body { margin-top: 23px; }

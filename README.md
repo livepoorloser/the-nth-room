@@ -24,3 +24,5 @@
 本地可直接打开 `index.html`。站点由 `main` 分支根目录发布到 GitHub Pages。将项目复制到另一台电脑时，需确保 `videos/` 中包含实际视频文件。
 
 主视觉照片来自 Unsplash 的电路板图片；用户可在 `index.html` 页脚找到来源入口。
+
+课程卡片照片来源：PCB 照片由 Mister rf 拍摄，来自 [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:RS_42471-12_PCB_02.jpg)，按 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 许可使用；焊接照片由 U.S. Navy 的 Mass Communication Specialist Seaman John Wagner 拍摄，来自 [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:US_Navy_070129-N-3038W-059_Electronics_Technician_3rd_Class_Christopher_Ralph_uses_a_soldering_iron_to_make_repairs_on_a_circuit_board_in_the_micro-miniature_electronics_repair_shop_aboard_the_Nimitz-class_aircraft_carrier_USS.jpg)，属公共领域；3D 打印机照片由 Iawaken 拍摄，来自 [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Boson_Machines_Graviton_Evolution_Automation_Expo.jpg)，按 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 许可使用。三张照片均通过 CSS 裁切以适配卡片比例；主页页脚列出署名与来源。
